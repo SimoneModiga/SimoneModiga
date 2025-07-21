@@ -29,7 +29,7 @@
 
 .navbar.sticky{
     padding: 15px 0;
-    background:rgb(10, 9, 9);
+    background:rgb(12, 11, 11);
 
 }
 
@@ -48,6 +48,20 @@
 
 .navbar .logo a span{
     color:red;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    width: 50px; /* dimensione logo */
+    height: auto;
+    margin-right: 10px; /* spazio tra immagine e testo */
+    border-radius: 50%; /* se vuoi il logo rotondo */
 }
 
 .navbar .menu li{
@@ -100,7 +114,7 @@
 
 .homeIndex{
     display: flex;
-    background: url("banner.png") no-repeat center;
+    background: black;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -194,9 +208,9 @@
 
 .aboutIndex{
     display: flex;
-    background: url("bannerAbout.png") no-repeat center;
+    background: black;
     height: 100vh;
-    color: rgb(0, 0, 0);
+    color: white;
     min-height: 500px;
     font-family: 'Raleway', sans-serif;
     width: 100%;
@@ -206,55 +220,33 @@
     width:60%;
 }
 
-.aboutIndex .titleAbout{
+.aboutIndex .titleAbout {
     position: relative;
     text-align: center;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 60px;
     padding-bottom: 20px;
+    border-bottom: 4px solid red;
 }
 
-.aboutIndex .titleAbout::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left:50%;
-    width:180px;
-    height: 3px;
-    background:rgb(175, 0, 0);
-    transform: translateX(-50%);
-   
-}
 
-.aboutIndex .titleAbout::after{
-    content: "who i am";
-    position: absolute;
-    font-size:20px;
-    bottom: -7px;
-    left:50%;
-    padding:5px;
-    background:rgb(255, 255, 255);
-    color:rgb(175, 0, 0);
-    transform: translateX(-50%);
-   
-}
 
 
 
 /* skill section style */
 .skillIndex{
     display: flex;
-    background: url("bannerSkill.png") no-repeat center;
-    height: 100vh;
-    color: rgb(0, 0, 0);
+    flex-direction: column;
+    background: black;
+    color: white;
     min-height: 500px;
     font-family: 'Raleway', sans-serif;
     width: 100%;
 }
 
 .skillIndex .max-width{
-    width:60%;
+    width:70%;
 }
 
 .skillIndex .titleSkill{
@@ -264,40 +256,18 @@
     font-weight: 600;
     margin-bottom: 60px;
     padding-bottom: 20px;
+    border-bottom: 4px solid red;
 }
 
-.skillIndex .titleSkill::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left:50%;
-    width:180px;
-    height: 3px;
-    background:rgb(175, 0, 0);
-    transform: translateX(-50%);
-   
-}
-
-.skillIndex .titleSkill::after{
-    content: "what i know";
-    position: absolute;
-    font-size:20px;
-    bottom: -15px;
-    left:50%;
-    padding:5px;
-    background:rgb(255, 255, 255);
-    color:rgb(175, 0, 0);
-    transform: translateX(-50%);
-   
-}
 
 /*Youtube section style*/
 
 .YoutubeIndex{
     font-family: 'Raleway', sans-serif;
-    background: #fff;
+    background: black;
     color:#fff;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
+    padding-top: 300px;
     
 }
 
@@ -309,32 +279,9 @@
     margin-bottom: 60px;
     padding-bottom: 20px;
     padding-top: 50px;
+    border-bottom: 4px solid red;
 }
 
-.YoutubeIndex .titleYoutube::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left:50%;
-    width:180px;
-    height: 3px;
-    background:rgb(175, 0, 0);
-    transform: translateX(-50%);
-   
-}
-
-.YoutubeIndex .titleYoutube::after{
-    content: "know me";
-    position: absolute;
-    font-size:20px;
-    bottom: -15px;
-    left:50%;
-    padding:5px;
-    background:white;
-    color:rgb(175, 0, 0);
-    transform: translateX(-50%);
-   
-}
 
 /* Float four columns side by side */
 .youtubeIndex-content .column {
@@ -344,7 +291,7 @@
 }
 
 .YoutubeIndex h2{
-    color:black;
+    color:white;
 }
   
 /* Remove extra left and right margins, due to padding in columns */
@@ -361,45 +308,37 @@
   
 /* Style the counter cards */
 .youtubeIndex-content .column .card {
-    padding: 20px 25px;
     text-align: center;
     background: #111;
     border-radius: 8px;
-}
-
-
-.youtubeIndex-content .column .card i{
-    font-size: 48px;
-    color: rgb(175, 0, 0);
-}
-
-.youtubeIndex-content .column .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+    margin-bottom: 30px;
+    
 }
 
 .youtubeIndex-content .column .card{
     transition: all 0.3s ease;
-    box-shadow: 0 5px 4px rgb(216, 4, 4); 
+    box-shadow: 0 5px 4px white;
 }
 
 .youtubeIndex-content .column:hover .card{
     transform: scale(1.05);
+    box-shadow: 0 7px 5px red;
 }
 
-.youtubeIndex-content .card:hover{
-    background: white;
-    color: black;
-    box-shadow: 0 5px 4px black;
-}
 
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
 
 /*footer styling*/
 footer{
     font-family: 'Raleway', sans-serif;
     color: rgb(255, 255, 255);
-    background:rgb(0, 0, 0);
+    background:#111;
     padding:10px;
     font-size:18px;
     text-align: center;
@@ -434,61 +373,11 @@ footer a{
         padding-top: 50px;
     }
 
-    .skillIndex .titleSkill::after{
-        font-size:17px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-       
-    }
-
-    .aboutIndex .titleAbout::after{
-        font-size:17px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-       
-    }
-
 
 }
 
-@media (max-width:991px){
-    .max-width{
-        padding: 0 50px;
-    }
 
-    .social_links ul li .fa{
-
-        font-size: 26px;
-        line-height: 56px;
-    }
-    
-    .social_links ul li a{
-        width: 53px;
-        height: 53px;
-    }
-
-    .skillIndex .titleSkill{
-        font-size: 32px;
-        font-weight: 600;
-    }
-
-    .aboutIndex .titleAbout{
-        font-size: 32px;
-        font-weight: 600;
-    }
-
-    .YoutubeIndex .titleYoutube{
-        font-size: 32px;
-        font-weight: 600;
-    }
-}
-
-
-@media (max-width:947px){
+@media (max-width:1077px){
     .max-width{
         padding: 0 50px;
     }
@@ -552,17 +441,54 @@ footer a{
     }
 
     .youtubeIndex-content .column{
-        width: 100%;
+        width: 70%;
         display: block;
         margin-bottom: 20px;
     }
 
-    .skillIndex{
-        margin-bottom: 80px;
+    .youtubeIndex-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
 
     
 }
+
+@media (max-width:991px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 26px;
+        line-height: 56px;
+    }
+    
+    .social_links ul li a{
+        width: 53px;
+        height: 53px;
+    }
+
+    .skillIndex .titleSkill{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .aboutIndex .titleAbout{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .YoutubeIndex .titleYoutube{
+        font-size: 32px;
+        font-weight: 600;
+    }
+}
+
+
 
 
 @media (max-width:889px){
@@ -583,41 +509,6 @@ footer a{
     .YoutubeIndex .titleYoutube{
         font-size: 30px;
         font-weight: 600;
-    }
-
-    .YoutubeIndex .titleYoutube::after{
-        font-size:15px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-    }
-
-    .skillIndex .titleSkill::after{
-        font-size:15px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-       
-    }
-
-    .aboutIndex .titleAbout::after{
-        font-size:15px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-        
-       
-    }
-
-    .aboutIndex .titleAbout::before{
-        height:2px;
-    }
-
-    .skillIndex .titleSkill::before{
-        height:2px;
     }
 
     
@@ -652,36 +543,6 @@ footer a{
         font-weight: 600;
     }
 
-    .skillIndex .titleSkill::after{
-        font-size:13px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-       
-    }
-
-    .aboutIndex .titleAbout::after{
-        font-size:13px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-        
-       
-    }
-
-    .aboutIndex .titleAbout::before{
-        height:2px;
-    }
-
-    .skillIndex .titleSkill::before{
-        height:2px;
-    }
-
-    .YoutubeIndex .titleYoutube::before{
-        height: 2px;
-    }
     
 
     footer{
@@ -717,45 +578,6 @@ footer a{
         padding-top: 50px;
     }
 
-    .skillIndex .titleSkill::after{
-        font-size:13px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-       
-    }
-
-    .YoutubeIndex .titleYoutube::after{
-        font-size:13px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-    }
-
-    .aboutIndex .titleAbout::after{
-        font-size:13px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-        
-       
-    }
-
-    .aboutIndex .titleAbout::before{
-        height:2px;
-    }
-
-    .skillIndex .titleSkill::before{
-        height:2px;
-    }
-
-
-    .skillIndex{
-        margin-bottom: 200px;
-    }
     
 }
 
@@ -774,32 +596,6 @@ footer a{
         padding-top: 50px;
     }
 
-    .skillIndex .titleSkill::after{
-        font-size:13px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-       
-    }
-
-    .aboutIndex .titleAbout::after{
-        font-size:13px;
-        bottom: -15px;
-        left:50%;
-        padding:5px;
-        transform: translateX(-50%);
-        
-       
-    }
-
-    .aboutIndex .titleAbout::before{
-        height:2px;
-    }
-
-    .skillIndex .titleSkill::before{
-        height:2px;
-    }
 
     
 }
@@ -829,10 +625,6 @@ footer a{
     }
 
 
-
-    .skillIndex{
-        margin-bottom: 300px;
-    }
 }
 
 @media (max-width:538px){
@@ -864,10 +656,6 @@ footer a{
         font-size: 27px;
         font-weight: 600;
         padding-top: 250px;
-    }
-
-    .skillIndex{
-        margin-bottom: 400px;
     }
 
     .youtubeIndex-content .column .card i{
@@ -918,42 +706,16 @@ footer a{
         width:80%;
     }
 
-    .skillIndex{
-        margin-bottom: 500px;
-    }
 }
 
 
-@media (max-width:426px){
-    .skillIndex{
-        margin-bottom: 550px;
-    }
-}
 
+@media (max-width:410px){
 
-@media (max-width:404px){
     .skillIndex .titleSkill{
         font-size: 27px;
         font-weight: 600;
         padding-top: 480px;
-    }
-
-    .skillIndex{
-        margin-bottom: 800px;
-    }
-    
-}
-
-
-@media (max-width:360px){
-    .skillIndex .titleSkill{
-        font-size: 27px;
-        font-weight: 600;
-        padding-top: 480px;
-    }
-
-    .navbar .logo a{
-        font-size: 30px;
     }
 
     .social_links ul li .fa{
@@ -968,40 +730,62 @@ footer a{
     }
 
     .homeIndex .max-width .text-1{
-         font-size: 25px;
+         font-size: 20px;
     }
     
     .homeIndex .max-width .text-2{
-         font-size: 45px;
+         font-size: 40px;
     }
     .homeIndex .max-width .text-3{
-        font-size: 25px;
+        font-size: 20px;
     }
 
-    .skillIndex{
-        margin-bottom: 880px;
-    }
-}
-
-@media (max-width:354px){
-    .titleSkill{
-        margin-top: 100px;
+    
+    .logo-write{
+        font-size:30px;
     }
 
-    .skillIndex{
-        margin-bottom: 1000px;
+    .logo-img {
+        width: 40px; /* dimensione logo */
     }
+
 }
 
 
-@media (max-width:340px){
-    .skillIndex{
-        margin-bottom: 1100px;
+
+@media (max-width:342px){
+
+    .social_links ul li .fa{
+
+        font-size: 18px;
+        line-height: 45px;
+    }
+    
+    .social_links ul li a{
+        width: 42px;
+        height: 42px;
     }
 
-    .titleSkill{
-        margin-top: 100px;
+    .homeIndex .max-width .text-1{
+         font-size: 17px;
     }
+    
+    .homeIndex .max-width .text-2{
+         font-size: 35px;
+    }
+    .homeIndex .max-width .text-3{
+        font-size: 17px;
+    }
+
+    
+    .logo-write{
+        font-size:25px;
+    }
+
+    .logo-img {
+        width: 35px; /* dimensione logo */
+    }
+
 }
 
 @media (max-width:329px){
@@ -1011,9 +795,6 @@ footer a{
         padding-top: 580px;
     }
 
-    .skillIndex{
-        margin-bottom: 1100px;
-    }
 }
 
 @media (max-width:322px){
@@ -1029,91 +810,6 @@ footer a{
 @media (max-width:310px){
     .YoutubeIndex{
         padding-top: 200px;
-    }
-}
-
-
-@media (max-width:308px){
-    .skillIndex .titleSkill{
-        font-size: 27px;
-        font-weight: 600;
-        padding-top: 650px;
-    }
-
-    footer{
-        font-size: 13px;
-    }
-}
-
-@media (max-width:298px){
-
-    .YoutubeIndex{
-        padding-top: 400px;
-    }
-
-    .skillIndex .titleSkill{
-        font-size: 27px;
-        font-weight: 600;
-        padding-top: 750px;
-    }
-
-    .navbar .logo a{
-        font-size: 28px;
-    }
-
-    .social_links ul li .fa{
-
-        font-size: 18px;
-        line-height: 48px;
-    }
-    
-    .social_links ul li a{
-        width: 44px;
-        height: 44px;
-    }
-
-    .homeIndex .max-width .text-1{
-         font-size: 22px;
-    }
-    
-    .homeIndex .max-width .text-2{
-         font-size: 40px;
-    }
-    .homeIndex .max-width .text-3{
-        font-size: 22px;
-    }
-
-}
-
-
-@media (max-width:268px){
-    .skillIndex .titleSkill::after{
-        bottom: -18px;
-        padding: 4px;
-    }
-    
-}
-
-@media (max-width:260px){
-    .skillIndex .titleSkill::after{
-        bottom: -20px;
-       
-    }
-    
-}
-
-
-@media (max-width:270px){
-
-    .titleSkill{
-        margin-top: 200px;
-    }
-}
-
-@media (max-width:282px){
-
-    .YoutubeIndex{
-        padding-top: 600px;
     }
 }
 

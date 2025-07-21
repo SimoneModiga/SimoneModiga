@@ -29,7 +29,7 @@
 
 .navbar.sticky{
     padding: 15px 0;
-    background:rgb(10, 9, 9);
+    background:rgb(12, 11, 11);
 
 }
 
@@ -48,6 +48,20 @@
 
 .navbar .logo a span{
     color:red;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    width: 50px; /* dimensione logo */
+    height: auto;
+    margin-right: 10px; /* spazio tra immagine e testo */
+    border-radius: 50%; /* se vuoi il logo rotondo */
 }
 
 .navbar .menu li{
@@ -99,7 +113,7 @@
 
 .homeIndex{
     display: flex;
-    background: url("banner.png") no-repeat center;
+    background: black;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -187,13 +201,14 @@
 
 .repository{
     display: flex;
-    background: url("banner.png") center;
+    background: black;
     background-attachment: fixed;
     color: #fff;
     min-height: 500px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    padding-bottom: 100px;
 
 }
 
@@ -237,7 +252,7 @@
 }
 
 .repository .titleRepository::after{
-    content: "exercices";
+    content: "esercizi";
     position: absolute;
     font-size:20px;
     bottom: -14px;
@@ -277,6 +292,7 @@
     border-radius: 7px;
     box-shadow: 0 5px 4px rgba(161, 0, 0, 0.7); 
     transition: all .3s ease;
+    font-size: 17px;
 }
 
 .accessExercise a:hover{
@@ -437,16 +453,13 @@ footer a{
     footer{
         font-size: 15px;
     }
-}
-
-@media (max-width:804px){
 
     .accessExercise{
         width:35%;
     }
 }
 
-@media (max-width:719px){
+@media (max-width:727px){
 
     .accessExercise{
         width:40%;
@@ -478,6 +491,7 @@ footer a{
         height: 50px;
     }
 
+
 }
 
 @media (max-width:638px){
@@ -489,6 +503,7 @@ footer a{
     .accessExercise a{
         height: 34px;
         width:80px;
+        font-size: 15px;
     }
 }
 
@@ -509,7 +524,7 @@ footer a{
     }
 }
 
-@media (max-width:538px){
+@media (max-width:519px){
 
     .max-width{
         padding: 0 23px;
@@ -532,6 +547,10 @@ footer a{
     .social_links ul li a{
         width: 48px;
         height: 48px;
+    }
+
+    .accessExercise{
+        width:50%;
     }
 
 }
@@ -588,6 +607,18 @@ footer a{
 
 }
 
+
+@media (max-width:410px){
+    .logo-write{
+        font-size:30px;
+    }
+
+    .logo-img {
+        width: 40px; /* dimensione logo */
+    }
+}
+
+
 @media (max-width:400px){
     .accessExercise{
         width:60%;
@@ -614,13 +645,8 @@ footer a{
 }
 
 
-@media (max-width:374px){
-    .accessExercise{
-        width:60%;
-    }
-}
 
-@media (max-width:360px){
+@media (max-width:365px){
     .navbar .logo a{
         font-size: 30px;
     }
@@ -636,15 +662,12 @@ footer a{
         height: 46px;
     }
 
-}
-
-
-@media (max-width:355px){
-
     .accessExercise{
-        width:65%;
+        width:60%;
     }
+
 }
+
 
 @media (max-width:330px){
 
